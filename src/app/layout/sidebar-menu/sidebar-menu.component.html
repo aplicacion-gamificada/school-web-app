@@ -1,0 +1,24 @@
+<div class="w-60 h-full bg-white p-4 flex flex-col justify-between">
+  <!-- Logo -->
+  <div>
+    <div class="flex items-center justify-center gap-2 mb-6 mt-6">
+      <img src="images/numerino.png" alt="Numerino" class="h-25" />
+    </div>
+
+    <!-- Menu -->
+    <nav class="flex flex-col gap-2">
+      <a *ngFor="let item of menuItems" [routerLink]="item.route" routerLinkActive="active-link" class="menu-item">
+        <div class="menu-content">
+          <img [src]="item.icon" alt="{{ item.label }}" class="menu-icon" />
+          <span class="menu-label">{{ item.label }}</span>
+        </div>
+      </a>
+    </nav>
+  </div>
+
+  <!-- User -->
+  <div class="flex items-center gap-3 mt-6 text-sm text-gray-600">
+    <img [src]="user.avatar" class="w-15 h-15" />
+    <div class = "username">{{ user.name }}</div>
+  </div>
+</div>
