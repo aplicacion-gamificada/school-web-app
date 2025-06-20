@@ -1,35 +1,33 @@
 <div class="h-screen grid grid-cols-[240px_1fr]">
   <!-- 1: Sidebar -->
-  <div class="bg-gray-800 text-white flex items-center justify-center">
+  <div class="flex items-center justify-center">
     <app-sidebar-menu></app-sidebar-menu>
   </div>
 
-  <!-- Contenedor derecho (2 al 6) -->
-  <div class="grid grid-rows-[auto_auto_auto_auto_auto] gap-2 overflow-hidden p-4">
+  <!-- Contenedor derecho - Cambiado a Flexbox -->
+  <div class="flex flex-col overflow-y-auto p-1 gap-2">
     
     <!-- 2: Barra superior -->
-    <div class="bg-white rounded-xl px-6 py-4 shadow flex justify-between items-center">
-      2
+    <div class="p-2 flex-shrink-0">
+      <div class="saludo">¡Bienvenido Luis!</div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+      <app-home-card [imageUrl]="'images/icon-logros-obtenidos.png'" [title]="'Total Estudiantes'" [titleColor]="'#EF6C00'"
+        [subtitle]="'83'" [points]="'En 3 aulas activas'" [pointsColor]="'#EF6C00'"></app-home-card>
+      <app-home-card [imageUrl]="'images/icon-puntos-totales.png'" [title]="'Progreso Promedio'" [titleColor]="'#EF6C00'"
+        [subtitle]="'68%'" [points]="'En la última semana'" [pointsColor]="'#59D721'"></app-home-card>
+      <app-home-card [imageUrl]="'images/icon-proximo-logro.png'" [title]="'Ejercicios Completados'" [titleColor]="'#EF6C00'"
+        [subtitle]="'68%'" [points]="'En la última semana'" [pointsColor]="'#28BFEE'"></app-home-card>
+    </div>
     </div>
 
     <!-- 3: Barra de progreso -->
-    <div class="bg-white rounded-xl p-4 shadow">
-        3
+    <div class="p-2 flex-shrink-0">
+        <app-weekly-activity-chart></app-weekly-activity-chart>
     </div>
 
     <!-- 4: Vista de niveles -->
-    <div class="bg-white rounded-xl p-4 shadow overflow-y-auto h-full">
-      4
-    </div>
-
-    <!-- 5: Parte superior debajo de 4 -->
-    <div class="bg-orange-100 rounded-xl p-4 shadow flex items-center justify-center">
-      5
-    </div>
-
-    <!-- 6: Parte inferior debajo de 5 -->
-    <div class="bg-purple-100 rounded-xl p-4 shadow">
-      6
+    <div class="p-2 flex-shrink-0">
+      <app-block-progress-chart></app-block-progress-chart>
     </div>
   </div>
 </div>

@@ -1,0 +1,92 @@
+.class-card {
+  background-color: #fff;
+  border-radius: 20px;
+  border: 3px solid;
+  border-color: #DDDDDD;
+  padding: 20px;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: white;
+  margin: 20px 0;
+
+  .class-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .class-icon-container {
+      border-radius: 8px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 15px;
+
+      .class-icon {
+        color: #fff;
+        font-size: 32px;
+        font-weight: bold;
+      }
+    }
+
+    .class-details {
+      display: flex;
+      flex-direction: column;
+
+      .class-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+      }
+
+      .class-status-active {
+        background-color: #28a745; // Green color for active
+        color: #fff;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+
+      .class-students {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
+
+  .class-progress-section {
+    .class-progress-label {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    p-progressBar {
+      --p-progressbar-height: 25px; // Matches your current height
+      --p-progressbar-border-radius: 15px; // Matches your current border-radius
+      --p-progressbar-background: #e0e0e0; 
+       --p-progressbar-value-background: #1C497E;
+       --p-progressbar-label-color: #ffffff; // Example: white for contrast
+      --p-progressbar-label-font-size: 12px;
+      --p-progressbar-label-font-weight: bold;
+
+      .ui-progressbar {
+        height: var(--p-progressbar-height);
+        background-color: var(--p-progressbar-background); 
+        border-radius: var(--p-progressbar-border-radius); 
+        color: #1C497E;
+
+        .ui-progressbar-value {
+          background-color: var(--p-progressbar-value-background); 
+          border-radius: 5px; 
+        }
+      }
+    }
+  }
+}

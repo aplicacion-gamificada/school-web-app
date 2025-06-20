@@ -1,0 +1,18 @@
+<!-- Contenedor general -->
+<div class="h-screen grid grid-cols-[240px_1fr]">
+  <!-- Sidebar -->
+  <div class="flex items-center justify-center">
+    <app-sidebar-menu></app-sidebar-menu>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="bg-gray-50 p-8 overflow-y-scroll">
+    <!-- Sección: Tu aula -->
+    <h1 class="aula-titulo">Mis Aulas</h1>
+
+    <!-- Sección: Tus compañeros -->
+    <app-class-card></app-class-card>
+    <app-class-card></app-class-card>
+    <app-class-card></app-class-card>
+  </div>
+</div>

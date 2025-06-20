@@ -1,0 +1,106 @@
+<div class="h-screen grid grid-cols-[240px_1fr]">
+    <!-- Sidebar -->
+    <div class="bg-gray-400 flex items-center justify-center">
+        <app-sidebar-menu></app-sidebar-menu>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="p-8 overflow-y-scroll">
+        <div class="reports-container">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="title">Mis Reportes</h1>
+            </div>
+
+            <!-- Filters Section -->
+            <div class="filters-section">
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="fechaInicio">Fecha de Inicio</label>
+                        <div class="input-wrapper">
+                            <input type="date" id="fechaInicio" [(ngModel)]="filters.fechaInicio" class="filter-input">
+                            <span class="calendar-icon">📅</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="fechaFin">Fecha de Fin</label>
+                        <div class="input-wrapper">
+                            <input type="date" id="fechaFin" [(ngModel)]="filters.fechaFin" class="filter-input">
+                            <span class="calendar-icon">📅</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button class="filter-btn" (click)="onFilter()">
+                            🔍 Filtrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reports Grid -->
+            <div class="reports-grid">
+                <div *ngFor="let report of reports" class="report-card" [attr.data-color]="report.color">
+
+                    <div class="report-header">
+                        <div class="report-icon" [ngClass]="'icon-' + report.color">
+                            <span *ngIf="report.icon === 'chart'">📊</span>
+                            <span *ngIf="report.icon === 'trophy'">🏆</span>
+                            <span *ngIf="report.icon === 'clock'">⏱️</span>
+                        </div>
+                        <div class="report-content">
+                            <h3 class="report-title" [ngClass]="'text-' + report.color">
+                                {{ report.title }}
+                            </h3>
+                            <p class="report-description">
+                                {{ report.description }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="report-actions">
+                        <button class="action-btn preview-btn" (click)="onPreview(report.id)">
+                            👁️ Vista previa
+                        </button>
+                        <button class="action-btn download-btn" [ngClass]="'download-' + report.color"
+                            (click)="onDownloadCSV(report.id)">
+                            ⬇️ Descargar CSV
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Information Section -->
+            <div class="info-section">
+                <div class="info-header">
+                    <span class="info-icon">ℹ️</span>
+                    <h3>¿Qué incluyen los reportes?</h3>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-column">
+                        <h4>Reporte de Progreso:</h4>
+                        <ul>
+                            <li *ngFor="let detail of reports[0].details">{{ detail }}</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-column">
+                        <h4>Reporte de Logros:</h4>
+                        <ul>
+                            <li *ngFor="let detail of reports[1].details">{{ detail }}</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-column">
+                        <h4>Reporte de Tiempo:</h4>
+                        <ul>
+                            <li *ngFor="let detail of reports[2].details">{{ detail }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

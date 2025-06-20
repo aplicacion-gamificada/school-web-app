@@ -1,0 +1,16 @@
+<div class="class-card">
+  <div class="class-header">
+    <div class="class-icon-container">
+      <img src="images/icon-classroom-A.png" alt="Numerino"/>
+    </div>
+    <div class="class-details">
+      <div class="class-title">Sexto Grado A</div>
+      <span class="class-status-active">Activo</span>
+      <div class="class-students">Estudiantes: {{ numberOfStudents }}</div>
+    </div>
+  </div>
+  <div class="class-progress-section">
+    <div class="class-progress-label">Progreso promedio</div>
+    <p-progressBar [value]="averageProgress"></p-progressBar>
+  </div>
+</div>

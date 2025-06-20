@@ -13,7 +13,7 @@ menuItems = [
   { label: 'Inicio', icon: 'images/icon-inicio.png', route: '/home' },
   { label: 'Mis Aulas', icon: 'images/icon-aulas.png', route: '/classrooms' },
   { label: 'Estudiantes', icon: 'images/icon-logro.png', route: '/students' },
-  { label: 'Reportes', icon: 'images/icon-progress.png', route: '/reports' },
+  { label: 'Reportes', icon: 'images/icon-reportes.png', route: '/reports' },
   { label: 'Logros', icon: 'images/icon-logros.png', route: '/achievements' }
 ];
 

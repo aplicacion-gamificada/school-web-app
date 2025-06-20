@@ -1,0 +1,39 @@
+<div class="student-table-card">
+  <p-table [value]="students" [paginator]="true" [rows]="6">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Estudiante</th>
+        <th>Aula</th>
+        <th>Progreso</th>
+        <th>Logros</th>
+        <th>Nivel</th>
+        <th>Tiempo</th>
+        <th>Estado</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-student>
+      <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.classroom }}</td>
+        <td>{{ student.progress }}%</td>
+        <td>{{ student.achievements }}</td>
+        <td>{{ student.level }}</td>
+        <td>{{ student.time }} horas</td>
+        <td>
+          <span class="status-badge" [ngClass]="{
+              'status-excellent': student.status === 'Excelente',
+              'status-good': student.status === 'Bueno',
+              'status-low': student.status === 'Bajo'
+            }">
+            {{ student.status }}
+          </span>
+        </td>
+      </tr>
+    </ng-template>
+    <div class="custom-paginator-container flex justify-center">
+    <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="120"
+      [rowsPerPageOptions]="[10, 20, 30]">
+    </p-paginator>
+  </div>
+  </p-table>
+</div>

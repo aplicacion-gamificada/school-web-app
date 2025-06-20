@@ -1,0 +1,147 @@
+:host {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: white;
+}
+
+.student-table-card {
+  background-color: #fff; // This sets the outer card's background to white
+  margin: 20px 0;
+
+  // --- PrimeNG Table Design Token Overrides ---
+  --p-datatable-border-color: #e0e0e0;
+  --p-datatable-header-background: #2c598d;
+  --p-datatable-header-color: #ffffff;
+  --p-datatable-header-padding: 12px 15px;
+  --p-datatable-header-cell-background: #2c598d;
+  --p-datatable-header-cell-color: #ffffff;
+  --p-datatable-header-cell-border-color: rgba(255, 255, 255, 0.2);
+  --p-datatable-row-background: #ffffff;
+  --p-datatable-row-color: #333333;
+  --p-datatable-row-hover-background: #f8f8f8;
+  --p-datatable-body-cell-border-color: #e0e0e0;
+  --p-datatable-body-cell-padding: 10px 15px;
+  --p-datatable-row-toggle-button-border-radius: 20px;
+
+  // Ensure the built-in paginator of p-table also has a white background
+  --p-datatable-paginator-background: #ffffff;
+
+  .p-datatable {
+    border-radius: 20px;
+
+    .p-datatable-thead > tr > th {
+      border: none;
+      &:first-child {
+        border-top-left-radius: 8px;
+      }
+      &:last-child {
+        border-top-right-radius: 8px;
+      }
+    }
+
+    .p-datatable-tbody > tr > td {
+      &:last-child {
+        text-align: center;
+      }
+    }
+
+    .p-datatable-tbody > tr:last-child > td {
+      border-bottom: none;
+    }
+  }
+
+  .custom-paginator-container {
+    padding-top: 20px;
+
+    p-paginator {
+      --p-paginator-background: #ffffff;
+      --p-paginator-padding: 10px;
+      --p-paginator-gap: 5px;
+      --p-paginator-color: #333333;
+      --p-paginator-nav-button-background: transparent;
+      --p-paginator-nav-button-hover-background: #f0f0f0;
+      --p-paginator-nav-button-selected-background: #007bff;
+      --p-paginator-nav-button-color: #555555;
+      --p-paginator-nav-button-hover-color: #333333;
+      --p-paginator-nav-button-selected-color: #ffffff;
+      --p-paginator-nav-button-width: 30px;
+      --p-paginator-nav-button-height: 30px;
+      --p-paginator-nav-button-border-radius: 4px;
+      background-color: var(--p-paginator-background) !important;
+      border: none !important;
+      box-shadow: none !important;
+
+      .p-paginator-first,
+      .p-paginator-prev,
+      .p-paginator-next,
+      .p-paginator-last {
+        display: none;
+      }
+
+      .p-paginator-pages .p-paginator-page {
+        color: var(--p-paginator-nav-button-color);
+        background-color: var(--p-paginator-nav-button-background);
+
+        &.p-highlight {
+          background-color: var(--p-paginator-nav-button-selected-background);
+          color: var(--p-paginator-nav-button-selected-color);
+          border-color: var(--p-paginator-nav-button-selected-background);
+        }
+
+        &:not(.p-highlight):hover {
+          background-color: var(--p-paginator-nav-button-hover-background);
+          color: var(--p-paginator-nav-button-hover-color);
+        }
+      }
+    }
+  }
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.status-excellent {
+  background-color: #28a745;
+}
+
+.status-good {
+  background-color: #007bff;
+}
+
+.status-low {
+  background-color: #dc3545;
+}
+
+.action-button {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s, border-color 0.2s;
+
+  &:hover {
+    background-color: #f0f0f0;
+    border-color: #aaa;
+  }
+
+  .pi {
+    color: #555;
+    font-size: 14px;
+  }
+}
