@@ -1,0 +1,52 @@
+[
+  {
+    "id": 201,
+    "nombre": "Pepito García",
+    "aulaId": 101,
+    "progreso": 80,
+    "logros": 5,
+    "nivel": 3,
+    "tiempoEstudio": "4h 30m",
+    "estado": "activo"
+  },
+  {
+    "id": 202,
+    "nombre": "Juancito Pérez",
+    "aulaId": 101,
+    "progreso": 70,
+    "logros": 4,
+    "nivel": 2,
+    "tiempoEstudio": "3h 20m",
+    "estado": "activo"
+  },
+  {
+    "id": 203,
+    "nombre": "Carlitos Gonzales",
+    "aulaId": 101,
+    "progreso": 75,
+    "logros": 3,
+    "nivel": 2,
+    "tiempoEstudio": "2h 50m",
+    "estado": "activo"
+  },
+  {
+    "id": 204,
+    "nombre": "Lucía Fernández",
+    "aulaId": 102,
+    "progreso": 60,
+    "logros": 2,
+    "nivel": 1,
+    "tiempoEstudio": "1h 45m",
+    "estado": "activo"
+  },
+  {
+    "id": 205,
+    "nombre": "Mario Torres",
+    "aulaId": 102,
+    "progreso": 65,
+    "logros": 3,
+    "nivel": 1,
+    "tiempoEstudio": "2h 15m",
+    "estado": "activo"
+  }
+]

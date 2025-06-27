@@ -1,0 +1,6 @@
+{
+  "id": 1,
+  "nombre": "Luis Validivia",
+  "email": "luis@upc.edu.pe",
+  "aulasAsignadas": [101, 102]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "id": 101,
+    "nombre": "6to A",
+    "estado": "activo",
+    "logo": "logo-aula-a.png",
+    "progresoPromedio": 75,
+    "estudiantes": [201, 202, 203]
+  },
+  {
+    "id": 102,
+    "nombre": "6to B",
+    "estado": "activo",
+    "logo": "logo-aula-b.png",
+    "progresoPromedio": 63,
+    "estudiantes": [204, 205]
+  }
+]

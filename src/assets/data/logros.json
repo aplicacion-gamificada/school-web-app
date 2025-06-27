@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "nombre": "Explorador Matemático",
+    "nivel": 1,
+    "descripcion": "Completó su primera lección",
+    "descripcionLarga": "El estudiante ha completado satisfactoriamente la primera lección del curso.",
+    "logo": "logro-explorador.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Maestro de Números",
+    "nivel": 2,
+    "descripcion": "Dominó operaciones básicas",
+    "descripcionLarga": "Demostró dominio en sumas, restas, multiplicaciones y divisiones.",
+    "logo": "logro-maestro.png"
+  }
+]
